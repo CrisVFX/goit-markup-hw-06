@@ -623,3 +623,15 @@ img {
   opacity: 0;
   pointer-events: none;
 }
+
+/* Form */
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
