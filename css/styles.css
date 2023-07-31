@@ -656,6 +656,7 @@ padding: 40px;
 
 .form {
   display: flex;
+  
   flex-direction: row;
   color: var(--white, #FFF);
 
@@ -672,7 +673,12 @@ letter-spacing: 0.32px;
   display: flex;
   flex-direction: column;
   width: 264px;
-height: 40px;
+  height: 40px;
+  color: white;
+  gap: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
 }
 
 .social-footer .button{
