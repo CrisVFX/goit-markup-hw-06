@@ -5,7 +5,7 @@
   --cornflower: #e7e9fc;
   --ocean: #404bbf;
   --slate: #434455;
-  --dairy, #FCFCFC
+  --dairy, #FCFCFC;
 }
 
 body {
@@ -174,6 +174,7 @@ img {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section.no-top-padding {
@@ -207,6 +208,7 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 31px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-menu .contact {
@@ -220,6 +222,22 @@ img {
 .contacts-menu .contact:hover,
 .contacts-menu .contact:focus {
   color: var(--iris);
+}
+
+.nav-menu .page.current{
+  position: relative;
+}
+
+.page.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+  margin-top: 20px;
+  left: 0;
+  bottom: -1px;
 }
 
 .bg-team {
@@ -394,6 +412,8 @@ img {
   border-radius: 50%;
   background-color: var(--iris);
   color: var(--cloud);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-item {
@@ -429,7 +449,9 @@ img {
   justify-content: center;
   align-items: center;
   color: #8e8f99;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0, 0.2, 1);
 }
+
 
 .partners .icon {
   fill: currentColor;
@@ -503,6 +525,7 @@ img {
   border-radius: 50%;
   color: var(--cloud);
   background-color: var(--iris);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-block {
@@ -533,30 +556,34 @@ img {
 .project-overlay {
   position: relative;
   overflow: hidden;
-  
 }
 
-.overlay-text {
-  position: absolute;
-  top: 0;
+.project .overlay {
+   position: absolute;
+  top:0;
+  left: 0;
   height: 100%;
   width: 100%;
-  padding: 40px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
   letter-spacing: 0.32px;
   color: var(--cloud);
   background-color: var(--iris);
-  transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
+  transform: translateY(101%);
+  transition: transform 250ms ease-in-out; 
 }
 
-.project-card:hover .overlay-text,
+.project .overlay-text {
+padding: 40px;
+}
+  
+
+.project-card:hover .overlay,   
 .project-card:focus {
   transform: translateY(0);
+}
+
+ .project-card:hover,
+ .project-card:focus{
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 /*Modal Window*/
@@ -575,8 +602,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  height: 584px;
+  min-width: 408px;
+  min-height: 584px;
   border-radius: 4px;
   background: var(--dairy, #FCFCFC);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
@@ -597,11 +624,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 
-  background-color: white;
-  color: black;
+  background-color: var(--cornflower);
+  color: var(--navyblue);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   cursor: pointer;
@@ -615,7 +642,8 @@ img {
 
 .modal-close:hover,
 .modal-close:focus {
-  color: var(--iris);
+  color: var(--cornflower);
+  background-color: var(--ocean);
 }
 
 .is-hidden {
