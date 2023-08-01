@@ -530,7 +530,7 @@ img {
 
 .footer-block {
   margin-top: 12px;
-  margin-left: 123px;
+  margin-left: 123px; 
 }
 
 .footer-address {
@@ -588,6 +588,9 @@ padding: 40px;
 
 /*Modal Window*/
 .backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -599,6 +602,9 @@ padding: 40px;
 }
 
 .modal {
+  display:flex;
+  align-content: center;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -614,6 +620,67 @@ padding: 40px;
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
+}
+
+/* Style for the form inside the modal */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+justify-items: center;
+margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: center;
+  
+}
+
+.form-group label {
+  font-weight: bold;
+  height: 16px;
+  width: 16px;
+}
+
+/* Style for input fields and textarea */
+input,
+textarea {
+  width: 360px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+   background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+form-icon {
+  position: absolute;
+  margin-right: 15px;
+  top: 18px;
+}
+
+textarea {
+  width: 360px;
+  height: 120px;
+}
+
+
+/* Style for the checkbox label */
+.form-group label {
+  display: flex;
+}
+
+/* Style for the Submit button */
+.modal-submit-button {
+  padding: 16px 32px;
+  display: block;
+  margin: 0 auto;
+  gap: 10px;
+  width: 169px;
+  border-radius: 4px;
+  background: var(--iris, #4D5AE5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: white;
 }
 
 .modal-close {
@@ -652,45 +719,63 @@ padding: 40px;
   pointer-events: none;
 }
 
-/* Form */
+.modal-text {
+  color: var(--navyblue, #2E2F42);
+  text-align: center;
+  width: 360px;
+  margin-top: 72px;
+  margin-left: 24px;
+  margin-bottom: 16px;
+ font-weight: bold;
+}
+
+/* Form footer */
 
 .form {
   display: flex;
-  
-  flex-direction: row;
-  color: var(--white, #FFF);
+  flex-direction: column;
+  color: white;
+}
 
-/* Body Medium */
-font-family: Roboto;
+.form-list {
+  display: flex;
+  align-items: center;
+  margin-top
+}
+
+.subscribe-button {
+  display: flex ;
+  align-items: center;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color:  white;
+  background: var(--iris, #4D5AE5);
+  cursor: pointer;
+  gap: 16px;
+}
+
+.email-box{
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--white, #FFF);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: var(--navyblue);
+  color: white;
+  margin-right: 16px;
+}
+
+
+.arrow-icon {
+  fill: white;
+}
+
+.label {
+  margin-bottom: 10px;
+  color: var(--white, #FFF);
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 24px; /* 150% */
 letter-spacing: 0.32px;
 }
-
-
-.subscribe-button{
-  display: inline-flex;
-padding: 8px 24px;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-border: none;
-border-radius: 4px;
-background-color: var(--iris);
-color: white;
-}
-
-.arrow-icon{
-  width: 24px;
-  height: 24px;
-  margin-left: 16px;
-  fill: white;
-}
-
-.form-list{
-  display: flex;
-  flex-direction: column;
-}
-
