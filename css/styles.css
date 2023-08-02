@@ -596,7 +596,6 @@ padding: 40px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -608,7 +607,7 @@ padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 408px;
+  min-width: 400px;
   min-height: 584px;
   border-radius: 4px;
   background: var(--dairy, #FCFCFC);
@@ -622,65 +621,103 @@ padding: 40px;
   transform: translate(-50%, -50%) scale(0);
 }
 
-/* Style for the form inside the modal */
-.modal-form {
+.form-title {
+  color: var(--navyblue, #2E2F42);
+  text-align: center;
+  margin-top: 72px;
+  padding: 24px;
+  gap: 16px;
+/* Body Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+.form-hero{
   display: flex;
   flex-direction: column;
-justify-items: center;
-margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
-.form-group {
-  margin-bottom: 16px;
-  text-align: center;
-  
+.form-field{
+  position: relative; 
+  display: block;
+  margin-bottom: 8px;
 }
 
-.form-group label {
-  font-weight: bold;
-  height: 16px;
-  width: 16px;
-}
-
-/* Style for input fields and textarea */
-input,
-textarea {
+.form-input{
+  border-radius: 4px;
+  border: 1px solid var(--iris, #4D5AE5);
   width: 360px;
   height: 40px;
-  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.form-label {
   display: block;
-   background-repeat: no-repeat;
-  background-size: 24px;
+  text-align: left;
+  margin-bottom: 4px;
+  color: var(--lightslate, #8E8F99);
+  /* Small Text */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.48px;
 }
 
-form-icon {
+.form-icon{
   position: absolute;
-  margin-right: 15px;
-  top: 18px;
+  left: 16px;
+  pointer-events: none;
 }
 
-textarea {
+.form-text-area{
   width: 360px;
   height: 120px;
-}
-
-
-/* Style for the checkbox label */
-.form-group label {
-  display: flex;
-}
-
-/* Style for the Submit button */
-.modal-submit-button {
-  padding: 16px 32px;
-  display: block;
-  margin: 0 auto;
-  gap: 10px;
-  width: 169px;
   border-radius: 4px;
-  background: var(--iris, #4D5AE5);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  color: white;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
+}
+
+.agree-check{
+  margin-bottom: 24px;
+  color: var(--lightslate, #8E8F99);
+
+/* Small Text */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.48px;
+}
+
+.privacy {
+  color: var(--iris, #4D5AE5);
+/* Link Text */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-decoration-line: underline;
+}
+
+/*  Send button */
+.button-center {
+padding: 16px 32px;
+align-items: flex-start;
+text-align: center;
+align-items: center;
+width: 169px;
+height: 56px;
+margin-bottom: 24px;
 }
 
 .modal-close {
@@ -719,63 +756,44 @@ textarea {
   pointer-events: none;
 }
 
-.modal-text {
-  color: var(--navyblue, #2E2F42);
-  text-align: center;
-  width: 360px;
-  margin-top: 72px;
-  margin-left: 24px;
-  margin-bottom: 16px;
- font-weight: bold;
-}
 
 /* Form footer */
 
-.form {
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-
-.form-list {
+.footer-form{
   display: flex;
   align-items: center;
-  margin-top
+  gap: 24px;
 }
 
-.subscribe-button {
-  display: flex ;
-  align-items: center;
-  padding: 8px 24px;
-  border-radius: 4px;
-  color:  white;
-  background: var(--iris, #4D5AE5);
-  cursor: pointer;
-  gap: 16px;
-}
-
-.email-box{
+.footer-form .form-input{
   width: 264px;
-  height: 40px;
   border-radius: 4px;
   border: 1px solid var(--white, #FFF);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: var(--navyblue);
+}
+
+.footer-heading{
   color: white;
-  margin-right: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
 }
 
-
-.arrow-icon {
-  fill: white;
+.buton.primary {
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+background: var(--iris, #4D5AE5);
+height: 40px;
+width: 165px;
 }
-
-.label {
-  margin-bottom: 10px;
-  color: var(--white, #FFF);
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
-letter-spacing: 0.32px;
+   
+  
+.arrow-icon{
+  width: 24px;
+  height: 24px;
 }
