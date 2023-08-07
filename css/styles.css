@@ -1,14 +1,13 @@
 :root {
   --iris: #4d5ae5;
   --navyblue: #2e2f42;
-  --cloud: #f4f4fd;
+  --cloud:  #f4f4fd;
   --cornflower: #e7e9fc;
   --ocean: #404bbf;
   --slate: #434455;
-  --dairy, #FCFCFC;
-  --navyblue-modal, #
-  --white, #ffffff;
-  --lightslate, #8E8F99;
+  --dairy: #FCFCFC;
+  --white:  #ffffff;
+  --lightslate:  #8E8F99;
 }
 
 body {
@@ -452,7 +451,7 @@ img {
   justify-content: center;
   align-items: center;
   color: #8e8f99;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -468,7 +467,7 @@ img {
 
 .social-team .link:hover,
 .social-team .link:focus {
-  background-color: #31d0aa;
+  background-color: var(--ocean);
 }
 
 /* Footer Section */
@@ -732,9 +731,20 @@ padding: 40px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon{
+  fill: var(--iris);
+}
+
 .form-field .form-text-area{
   padding-left: 16px;
   margin-bottom: 24px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.form-text-area{
+  resize: none;
 }
 
 .agree-check{
@@ -769,7 +779,7 @@ padding: 40px;
 .agree-check .checkmark:checked + .icon {
   background-color: var(--ocean);
   border-color: var(--ocean);
-  fill:white;
+  fill:var(--white);
   outline: none;
 }
 
@@ -804,15 +814,17 @@ padding: 40px;
   padding: 14px 16px;
   margin: 0 12px 0 0;
   border-radius: 4px;
+  outline: none;
   border: 1px solid var(--white, #FFF);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: var(--navyblue);
+  color: var(--white);
 }
 
 .footer-form .footer-input:hover,
 .footer-form .footer-input:focus{
   outline: none;
-  border-color: white;
+  border-color:var(--white);
 }
 
 .footer-heading{
